@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { h, render } from 'preact';
 import TestComponent from '../../shared-component/dist/shared-component';
 
+//https://stackoverflow.com/questions/60907068/how-to-include-preact-component-with-hooks-in-react-app
+
 const ReactPreactBridge = () => {
     // Get the raw DOM node to render into
     const ref = useRef(null)
