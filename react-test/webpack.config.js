@@ -7,6 +7,14 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "build"),
   },
+  resolve: {
+    alias: {
+      react: "preact/compat",
+      "react-dom/test-utils": "preact/test-utils",
+      "react-dom": "preact/compat",
+      "react/jsx-runtime": "preact/jsx-runtime"
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),

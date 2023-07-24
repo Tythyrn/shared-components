@@ -1,11 +1,15 @@
 {
-    "presets": [
-      "@babel/preset-react"
-    ],
-    "plugins": [
-        ["@babel/plugin-transform-react-jsx", {
-          "pragma": "h",
-          "pragmaFrag": "Fragment"
-        }]
-      ]
+  "presets": [
+    "@babel/preset-env",
+    ["@babel/preset-react", {
+      "pragma": "h",          // Use 'h' as the JSX factory for Preact
+      "pragmaFrag": "Fragment"
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", {
+      "pragma": "h",
+      "pragmaFrag": "Fragment",
+    }]
+  ]
 }

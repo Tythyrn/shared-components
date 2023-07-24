@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'shared-component.js',
@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -20,11 +20,8 @@ module.exports = {
       },
     ],
   },
+  // pass all js files through Babel
   resolve: {
-    alias: {
-      // Specify the Preact alias for React in order to dynamically import the correct createElement function
-      react: 'preact/compat',
-      'react-dom': 'preact/compat',
-    },
-  },
+    extensions: ["*", ".js", ".jsx"],
+  }
 };
